@@ -36,8 +36,6 @@ device/jio/f220b/
 ├── fstab.qcom                 # Partition mount table for eMMC
 ├── system.prop                # Stock hardware system properties
 ├── proprietary-files.txt      # List of all required vendor blobs from stock
-├── extract-files.sh           # Automated script to pull blobs via ADB
-├── setup-makefiles.sh         # Generates vendor/jio/f220b makefiles
 ├── rootdir/                   # Ramdisk scripts & configs
 │   ├── fstab.qcom
 │   ├── init.qcom.rc
@@ -55,25 +53,14 @@ device/jio/f220b/
 
 ## How to Build Custom ROM (LineageOS 13.0 / AOSP 6.0.1)
 
-### 1. Place Device & Kernel Trees in Source Tree
+### 1. Place Device, Kernel & Vendor Trees in Source Tree
 ```bash
 # In your LineageOS / AOSP 6.0 root directory:
-mkdir -p device/jio/f220b
-cp -r /path/to/device_tree/* device/jio/f220b/
-
-mkdir -p kernel/jio/msm8909
-cp -r /path/to/kernel_tree/* kernel/jio/msm8909/
+git clone https://github.com/su60pi/jio_f220b_device_tree.git device/jio/f220b
+git clone https://github.com/su60pi/jio_f220b_vendor_tree.git vendor/jio/f220b
 ```
 
-### 2. Extract Proprietary Blobs
-Connect your rooted stock Jio Phone F220B via ADB:
-```bash
-cd device/jio/f220b
-./extract-files.sh 10.189.174.104:5555
-```
-This automatically extracts all proprietary graphics, camera, audio, sensors, and radio blobs into `vendor/jio/f220b/`.
-
-### 3. Initialize Build Environment & Compile
+### 2. Initialize Build Environment & Compile
 ```bash
 source build/envsetup.sh
 lunch full_f220b-userdebug
