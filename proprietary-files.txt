@@ -1,0 +1,65 @@
+# Audio HAL & processing
+lib/hw/audio.primary.msm8909.so
+lib/hw/audio_policy.msm8909.so
+lib/libaudio-resampler.so
+lib/libqcompostprocbundle.so
+lib/libqcomvisualizer.so
+
+# Camera HAL & daemon
+bin/mm-qcamera-daemon
+lib/hw/camera.msm8909.so
+lib/libmmcamera_interface.so
+
+# Camera core & pipeline libraries
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_is.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_wnr_module.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_imglib.so
+
+# SuperPix SP250A Rear Camera Sensor & Chromatix
+vendor/lib/libmmcamera_sp250a.so
+vendor/lib/libchromatix_sp250a_common.so
+vendor/lib/libchromatix_sp250a_default_video.so
+vendor/lib/libchromatix_sp250a_preview.so
+vendor/lib/libchromatix_sp250a_snapshot.so
+
+# SuperPix SP0A09 Front Camera Sensor & Chromatix
+vendor/lib/libmmcamera_sp0a09.so
+vendor/lib/libchromatix_sp0a09_common.so
+vendor/lib/libchromatix_sp0a09_preview.so
+
+# Adreno Graphics (Adreno 304)
+lib/egl/libEGL_adreno.so
+lib/egl/libGLESv1_CM_adreno.so
+lib/egl/libGLESv2_adreno.so
+lib/libgsl.so
+lib/libllvm-gsl.so
+lib/libadreno_utils.so
+lib/hw/gralloc.msm8909.so
+lib/hw/hwcomposer.msm8909.so
+lib/hw/memtrack.msm8909.so
+
+# Lights & Sensors
+lib/hw/lights.msm8909.so
+lib/hw/sensors.msm8909.so
+
+# Modem / RIL
+bin/qmuxd
+bin/netmgrd
+bin/rmt_storage
+lib/libril-qc-qmi-1.so
+lib/libqmi.so
+lib/libqmiservices.so
+lib/libqmi_client_qmux.so
+lib/libdsutils.so
+lib/libidl.so
